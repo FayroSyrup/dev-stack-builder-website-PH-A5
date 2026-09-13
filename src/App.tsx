@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
 import type { ITechnology } from "./types/technology";
 
 function App() {
@@ -18,23 +19,7 @@ function App() {
   return (
     <div className="min-h-screen bg-base-100">
       <Navbar />
-      <Hero />
-      <section id="technologies" className="container mx-auto px-4 py-12">
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="flex-1">
-            <TechGrid
-              technologies={technologies}
-              loading={loading}
-              stack={stack}
-              setStack={setStack}
-            />
-          </div>
-          <div className="w-full lg:w-80 shrink-0">
-            <YourStack stack={stack} setStack={setStack} />
-          </div>
-        </div>
-      </section>
-      <Footer />
+      
     </div>
   );
 }

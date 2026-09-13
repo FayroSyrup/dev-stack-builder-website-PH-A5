@@ -1,9 +1,4 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import TechGrid from "./components/TechGrid";
-import YourStack from "./components/YourStack";
-import Footer from "./components/Footer";
 import type { ITechnology } from "./types/technology";
 
 function App() {

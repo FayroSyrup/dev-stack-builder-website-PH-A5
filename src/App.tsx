@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import type { ITechnology } from "./types/technology";
 import Hero from "./components/Hero";
-import TechCard from "./components/TechCard";
 import TechGrid from "./components/TechGrid";
 import YourStack from "./components/YourStack";
+import Footer from "./components/Footer";
 
 function App() {
   const [technologies, setTechnologies] = useState<ITechnology[]>([]);
@@ -39,6 +39,7 @@ function App() {
           </div>
         </div>
       </section>
+      <Footer/>
       
     </div>
   );

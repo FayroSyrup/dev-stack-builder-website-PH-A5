@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import type { ITechnology } from "./types/technology";
 import Hero from "./components/Hero";
 import TechCard from "./components/TechCard";
+import TechGrid from "./components/TechGrid";
+import YourStack from "./components/YourStack";
 
 function App() {
   const [technologies, setTechnologies] = useState<ITechnology[]>([]);
@@ -22,6 +24,21 @@ function App() {
     <div className="min-h-screen bg-base-100">
       <Navbar />
       <Hero/>
+      <section id="technologies" className="container mx-auto px-4 py-12">
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex-1">
+            <TechGrid
+              technologies={technologies}
+              loading={loading}
+              stack={stack}
+              setStack={setStack}
+            />
+          </div>
+          <div className="w-full lg:w-80 shrink-0">
+            <YourStack stack={stack} setStack={setStack} />
+          </div>
+        </div>
+      </section>
       
     </div>
   );
